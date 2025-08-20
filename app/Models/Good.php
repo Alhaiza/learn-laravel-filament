@@ -10,4 +10,9 @@ class Good extends Model
     use HasFactory;
 
     protected $guarded = ['id'];
+
+    public function details()
+    {
+        return $this->hasMany(Detail::class);
+    }
 }
